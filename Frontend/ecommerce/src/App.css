@@ -1,0 +1,74 @@
+@font-face {
+  font-family: 'Nunito';
+  src: local('Nunito'), url(./fonts/Nunito-SemiBold.ttf) format('truetype');
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.navbar {
+  background-color: #3f3d56;
+  padding: 1rem;
+  position: sticky;
+  left: 0px;
+  top: 0px;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar ul {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  text-align: center;
+  padding: 0rem 1rem;
+}
+
+.navbar ul li a,
+.icon-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  margin: 0rem 0.8rem;
+  font-family: Nunito, sans-serif;
+  color: #e8f5f4;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 400px) {
+  .navbar {
+    position: relative;
+    left: 0px;
+    top: 0px;
+  }
+  .navbar ul {
+    display: block;
+  }
+  .navbar ul li {
+    margin: 0.5rem;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.countBagItems {
+  background-color: #ffecee;
+  color: #3f3d56;
+  border-radius: 2rem;
+  font-size: 0.8rem;
+  padding: 0px 5px;
+  transform: translate(-10%, -50%);
+}

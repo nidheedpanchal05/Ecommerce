@@ -1,0 +1,171 @@
+@font-face {
+  font-family: 'Nunito';
+  src: local('Nunito'), url(../fonts/Nunito-ExtraBold.ttf) format('truetype');
+}
+
+/*
+#3f3d56 purple
+#1b6e7c teal
+#e8f5f4 light teal
+#ffa4a8 Pink
+#ffecee light pink
+*/
+
+html {
+  font-family: Nunito, sans-serif;
+  background-color: #e8f5f4;
+}
+
+.home {
+  display: block;
+}
+
+.header {
+  text-align: center;
+  font-size: 2.2rem;
+  letter-spacing: 0.2rem;
+  color: #1b6e7c;
+  text-transform: uppercase;
+}
+
+.icon-btn {
+  background-color: #3f3d56;
+}
+
+.react-icons {
+  vertical-align: middle;
+  padding: 0rem 0.5rem;
+}
+
+.banner {
+  height: 400px;
+  background: url('../images/womens-fashion.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: #26243d70;
+  background-blend-mode: multiply;
+  display: flex;
+}
+
+.banner div {
+  color: #e8f5f4;
+  width: 100%;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-content: space-around;
+  justify-content: space-evenly;
+}
+
+.banner h3 {
+  font-size: 1.7rem;
+}
+
+.banner button {
+  border: none;
+  outline: none;
+  padding: 0.5rem 0rem;
+  font-family: Nunito, sans-serif;
+  font-size: 1rem;
+  background-color: #ffa4a8;
+  cursor: pointer;
+  border-radius: 0.2rem;
+}
+
+.latest-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-gap: 1.5rem;
+  padding: 10px;
+}
+
+.section {
+  text-align: center;
+  color: #1b6e7c;
+  font-size: 1.5rem;
+  letter-spacing: 0.1rem;
+  margin: 10px;
+}
+
+.latest-container .card {
+  display: inline-block;
+  box-sizing: border-box;
+  text-align: center;
+  box-shadow: 1px 1px 5px #7aa19d;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+/*width: 100%;
+  height: 300px;
+  object-fit: cover;
+  object-position: bottom;*/
+
+.latest-container .card .card-img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  transition: transform 0.4s;
+}
+
+.latest-container .card:hover .card-img {
+  transform: scale(1.08);
+  opacity: 0.7;
+}
+
+.card-item {
+  transition: transform 0.4s ease;
+  text-decoration: none;
+  padding: 5px;
+  color: #26243d;
+  font-size: 1.2rem;
+  position: relative;
+  display: inline-block;
+  top: -50%;
+  left: 0%;
+  visibility: hidden;
+  overflow-wrap: break-word;
+}
+
+.latest-container .card:hover .card-item {
+  transform: scale(1.3);
+  visibility: visible;
+}
+.card .name {
+  color: #3f3d56;
+  font-weight: 900;
+  font-size: 1.6rem;
+  margin: 1rem;
+  overflow-wrap: break-word;
+}
+
+.card .price {
+  margin: 1rem;
+  color: #1b6e7c;
+  font-size: 1rem;
+}
+
+@media screen and (max-width: 700px) {
+  .card .name {
+    font-size: 1.4rem;
+  }
+  .latest-container {
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .latest-container {
+    display: block;
+  }
+  .card {
+    margin: 10px;
+  }
+  .banner-img {
+    display: none;
+  }
+}

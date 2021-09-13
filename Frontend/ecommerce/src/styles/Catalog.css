@@ -1,0 +1,123 @@
+@font-face {
+  font-family: 'Nunito';
+  src: local('Nunito'), url(../fonts/Nunito-Light.ttf) format('truetype');
+}
+
+.cat-container {
+  display: flex;
+}
+
+.cat-container .filters {
+  text-align: center;
+  position: sticky;
+  left: 0px;
+  top: 60px;
+  background-color: #ffecee;
+  border: 1px solid #ffa4a8;
+  height: fit-content;
+}
+
+.title {
+  color: #3f3d56;
+  font-size: 1.5rem;
+  padding: 0em 1rem;
+  text-transform: capitalize;
+}
+
+.filters ul {
+  list-style-type: none;
+  margin: 0px;
+  padding: 1rem 1rem;
+  border-bottom: 1px #ffa4a8 solid;
+}
+
+.filter-item {
+  margin: 0.3rem;
+  font-size: 1rem;
+  padding: 0.2rem 0.6rem;
+  border: 1px solid #ffa4a8;
+  outline: none;
+  border-radius: 0.2rem;
+  background-color: white;
+  font-family: Nunito, sans-serif;
+}
+
+.catalog {
+  align-self: flex-start;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-column-gap: 1rem;
+  grid-row-gap: 1rem;
+  padding: 0.5rem;
+  background-color: white;
+  overflow: hidden;
+}
+
+.catalog .item-container {
+  padding: 0.5rem;
+  border: 1px #ffecee solid;
+  text-decoration: none;
+  width: 90%;
+}
+
+.catalog-card .catalog-card-img {
+  width: 100%;
+  height: 20rem;
+  object-fit: cover;
+}
+.catalog-card .catalog-name {
+  font-size: 1.4rem;
+  margin: 0.4rem;
+  color: #3f3d56;
+}
+.catalog-card .catalog-price {
+  font-size: 1rem;
+  margin: 0.4rem;
+  color: #1b6e7c;
+}
+
+@media screen and (max-width: 800px) {
+  .catalog-card .catalog-card-img {
+    width: 100%;
+    height: 15rem;
+  }
+
+  .catalog {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-column-gap: 1rem;
+    grid-row-gap: 1rem;
+    overflow: hidden;
+  }
+  .catalog-card .catalog-name {
+    font-size: 1rem;
+  }
+  .catalog-card .catalog-price {
+    font-size: 0.8rem;
+  }
+
+  .title {
+    font-size: 1.2rem;
+  }
+
+  ul li .filter-btn {
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .cat-container {
+    display: inline-block;
+  }
+  .cat-container .filters {
+    position: relative;
+    top: 0%;
+    left: 0%;
+    text-align: justify;
+    display: flex;
+  }
+  ul li .filter-btn {
+    margin: 0px;
+    padding: 0px;
+  }
+}

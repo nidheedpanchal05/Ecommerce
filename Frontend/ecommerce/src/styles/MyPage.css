@@ -1,0 +1,148 @@
+.router {
+  display: flex;
+  justify-content: space-between;
+}
+@media screen and (max-width: 500px) {
+  .router {
+    display: block;
+  }
+}
+
+.btn {
+  margin: 1rem;
+  padding: 5px 20px;
+  font-family: Nunito, sans-serif;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 0.2rem;
+  color: #3f3d56;
+  background-color: white;
+  border: none;
+}
+.btn:focus-within {
+  background-color: #e8f5f4;
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+.list-table {
+  background-color: white;
+  width: 100%;
+  table-layout: fixed;
+  color: #3f3d56;
+  overflow: scroll;
+  border-collapse: collapse;
+  word-wrap: break-word;
+}
+.list-table tbody tr:nth-child(even) {
+  background-color: #ffecee;
+}
+.list-table tbody tr td {
+  padding: 5px 8px;
+  border: 1px solid #ffa4a8;
+  font-size: 1rem;
+}
+.table-headers th {
+  text-align: left;
+  border: 1px #ffa4a8 solid;
+  font-size: 1.2rem;
+  padding: 10px;
+}
+.list-item-img {
+  height: 50px;
+  width: 50px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.edit-col {
+  display: flex;
+}
+.edit-btn,
+.del-btn {
+  background-color: transparent;
+  font-size: 1rem;
+  padding: 0.4rem;
+  margin: 0rem 0.2rem;
+  border-radius: 50%;
+  line-height: 2px;
+  cursor: pointer;
+}
+
+.edit-btn {
+  color: #1b6e7c;
+  border: 1px #1b6e7c solid;
+}
+
+.del-btn {
+  color: #ea4335;
+  border: 1px #ea4335 solid;
+}
+.edit-btn:hover,
+.edit-btn:focus {
+  background-color: #1b6e7c;
+  color: #e8f5f4;
+}
+.del-btn:hover,
+.del-btn:focus {
+  background-color: #ea4335;
+  color: #e8f5f4;
+  border: 1px solid #ea4335;
+}
+#add-products {
+  background-color: white;
+  display: grid;
+}
+
+#add-products td {
+  padding: 0.5rem;
+  color: #3f3d56;
+}
+
+#add-products td input {
+  font-family: Nunito;
+  font-size: 1rem;
+  color: #3f3d56;
+  outline: none;
+  background-color: whitesmoke;
+  border: none;
+  border-bottom: 2px #3f3d56 solid;
+}
+
+#add-products td input:focus-within {
+  background-color: white;
+}
+
+#add-products td select {
+  font-family: Nunito;
+  font-size: 1rem;
+  outline: #1b6e7c;
+}
+
+#add-products table tr td input {
+  font-size: 1rem;
+  padding: 0.2rem 0.6rem;
+}
+
+@media screen and (max-width: 500px) {
+  .table-headers th {
+    font-size: 0.6rem;
+  }
+  .list-table tbody tr td {
+    padding: 2px;
+    font-size: 0.6rem;
+  }
+  .list-item-img {
+    height: 25px;
+    width: 25px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  .edit-btn,
+  .del-btn {
+    font-size: 0.8rem;
+    border: none;
+  }
+}

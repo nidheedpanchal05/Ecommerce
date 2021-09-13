@@ -1,0 +1,66 @@
+.modal {
+  background-color: white;
+  box-shadow: 1px 1px 20px black;
+  backface-visibility: hidden;
+  overflow: auto;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  margin: 1rem;
+  z-index: 100;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+  color: #3f3d56;
+}
+
+.modal-content {
+  display: flex;
+  justify-content: center;
+}
+
+.modal-content * {
+  margin: 0.3rem;
+}
+
+.modal-content * input {
+  font-size: 1rem;
+  padding: 0.2rem 0.6rem;
+  font-family: Nunito;
+  max-width: 30vmax;
+  min-width: 20vmin;
+}
+
+.modal .modal-head {
+  color: #1b6e7c;
+  display: flex;
+  justify-content: space-between;
+  border: none;
+  border-bottom: 0.1rem #3f3d56 solid;
+}
+.modal-head * {
+  margin: 0.4rem 0.2rem;
+}
+.modal .close-btn {
+  line-height: 1.2rem;
+  background-color: white;
+  font-size: 1.2rem;
+  color: #ffa4a8;
+  cursor: pointer;
+  border: none;
+}
+
+@media screen and (max-width: 400px) {
+  .modal-content * {
+    margin: 0rem;
+  }
+
+  .modal-content * input {
+    font-size: 0.8rem;
+    padding: 0.2rem;
+    font-family: Nunito;
+    max-width: 30vmax;
+    min-width: 20vmin;
+  }
+}
